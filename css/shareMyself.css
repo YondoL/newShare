@@ -132,8 +132,8 @@ body {
 	border-top:2px solid #f7f7f7;
 	transition:all .5s;
 	-webkit-transition:all 0.5s;
-	-ms-transition:all .5s;
-	-moz-transiton:all .5s;
+	-ms-transition:all 0.5s;
+	-moz-transiton:all 0.5s;
 	padding-left: 15px;
 }
 .logo{

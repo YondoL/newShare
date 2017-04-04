@@ -100,23 +100,26 @@
 // 	}
 // });
 
-// $("body").swipeUp(function(e){
-
-//     console.log(123)
-
-//     })
 
 // document.addEventListener('touchmove', function (event) {
 // event.preventDefault();
 // }, false);
-$("body").on("swipeup",function(e){
-    console.log("下");
-    $(".download").removeClass("show");
-})
-$("body").on("swipedown",function(e){
-    $(".download").addClass("show");
-    console.log("上");
-})
+// $("body").on("swipeup",function(e){
+//     console.log("下");
+//     $(".download").removeClass("show");
+// })
+// $("body").on("swipedown",function(e){
+//     $(".download").addClass("show");
+//     console.log("上");
+// })
+
+var s=$(".download"),c=document.body.scrollTop;
+console.log(c)
+$(window).on("scroll",function(e){
+    console.log(1212)
+    var e=document.body.scrollTop;0==e?s.addClass("show"):s.removeClass("show"),c=e;
+});
+
 
 
 $(".btnLoad").on("click",function(){
