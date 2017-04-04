@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大米社区-分享页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="../images/Rice.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/ico" href="../images/Rice.ico">
+    <link rel="stylesheet" href="../css/shareMyself.css">
+</head>
+<body>
+<div id="share-myself">
+<div class="main">
+	<div class="header">
+		<div class="user-info">
+			<div class="user-info-img">			
+				<img src="../images/userimg.png" alt="" class="userHimg"><br>
+				<div class="moneyCent">
+					<img src="../images/moneymini.png" alt="" class="money">
+					<span>8656分</span>
+				</div>
+			</div>
+			<span class="userName">一叶知秋</span>
+		</div>
+	</div>
+	<div class="reply-header"></div>
+	<div class="user-stat">
+    	<div class="stat spon">
+    		<span class="type">发布</span>
+    		<div class="num-nuit"><span class="num">1000</span><span class="nuit">篇</span></div>
+    	</div>
+    	<div class="stat comment">
+    		<span class="type">收藏</span>
+    		<div class="num-nuit"><span class="num">320</span><span class="nuit">篇</span></div>
+    	</div>
+    </div>
+    <div class="reply-header"></div>
+	<div class="user-stat">
+    	<div class="stat spon">
+    		<span class="type">积分排行</span>
+    		<div class="num-nuit"><span class="num">8</span><span class="nuit">名</span></div>
+    	</div>
+    	<div class="stat comment">
+    		<span class="type">发布排行</span>
+    		<div class="num-nuit"><span class="num">22</span><span class="nuit">名</span></div>
+    	</div>
+    </div>
+	<div class="reply-header"></div>
+    <div class="user-stat">
+    	<div class="stat spon">
+    		<span class="type">被赞助</span>
+    		<div class="num-nuit"><span class="num">836</span><span class="nuit">分</span></div>
+    	</div>
+    	<div class="stat comment">
+    		<span class="type">被评论</span>
+    		<div class="num-nuit"><span class="num">2356</span><span class="nuit">次</span></div>
+    	</div>
+    	<div class="stat vote">
+    		<span class="type">被投票</span>
+    		<div class="num-nuit"><span class="num">5686</span><span class="nuit">票</span></div>
+    	</div>
+    </div>
+    <div class="reply-header"></div>
+    <div class="load">
+    	<div>到&nbsp;大米&nbsp;查看更多</div>
+    </div>
+    <div class="reply-header"></div>
+	<div class="footer">
+		北京乐道互联科技有限公司
+	</div>
+	<div class="download show">		
+		<div class="logo">
+			<img src="../images/logo.png" alt="">
+			<span>大米社区</span>
+		</div>
+		<div class="btnLoad">
+			下载
+		</div>
+	</div>
+</div>
+</div>	
+</body>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/touch.js"></script>
+<script>
+// var windowTop=0;//初始话可视区域距离页面顶端的距离
+// $(window).scroll(function() {
+// 	var scrolls = $(this).scrollTop();//获取当前可视区域距离页面顶端的距离
+// 	if(scrolls>=windowTop){//当B>A时，表示页面在向下滑动
+// 		windowTop=scrolls;
+// 		console.log("下");
+// 		$(".download").removeClass("show");
+// 	}else{
+// 		windowTop=scrolls;
+// 		$(".download").addClass("show");
+// 		console.log("上");
+// 	}
+// });
+
+// $("body").swipeUp(function(e){
+
+//     console.log(123)
+
+//     })
+
+// document.addEventListener('touchmove', function (event) {
+// event.preventDefault();
+// }, false);
+$("body").on("swipeup",function(e){
+    console.log("下");
+    $(".download").removeClass("show");
+})
+$("body").on("swipedown",function(e){
+    $(".download").addClass("show");
+    console.log("上");
+})
+
+
+$(".btnLoad").on("click",function(){
+	console.log(12121)
+    window.location.href = "http://www.upshequ.com/download/download.html"
+})
+$(".load").on("click",function(){
+	console.log(12121)
+    window.location.href = "http://www.upshequ.com/download/download.html"
+})
+
+</script>
+</html>

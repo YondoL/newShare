@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大米社区-分享页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="../images/Rice.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/ico" href="../images/Rice.ico">
+    <link rel="stylesheet" href="../css/sharePage.css">
+</head>
+<body>
+    <div id="share-page">
+        <div class="main">
+            <div class="info-wrapper">
+                <div class="user-info">
+                    <img class="user-img" src=""/>
+                    <div class="user-wrapper">
+                        <span class="user-name"></span><span class="timeText"></span>
+                        <!-- <span class="user-time">发布于&nbsp;&nbsp;</span> -->
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-word"></div>
+                    <div class="content-img"></div>
+                    <div class="content-link"></div>
+                    <script type="text/html" id="imgDivs" >
+                        <div class="content-img">
+                            <%for(var i= 0;i<imgNum;i++){%>
+                                <div class="imgDiv" id="changeDiv">
+                                    <img class="imgContent" src="<%=imgArr[i]%>"/>
+                                </div>
+                            <%}%>
+                        </div>               
+                    </script>
+                    <script type="text/html" id="linkDivs" >
+                        <div class="linkDiv" id="changeDiv">
+                            <div class="linkDl">
+                            <div class="linkDt">
+                                <img class="linkContent" src="<%=imgsLink%>"/>
+                            </div>
+                            <div class="linkText"><%=textLink%></div>
+                            </div>
+                        </div>            
+                    </script>
+                    <div class="content-bot">
+                        <div class="like-num">
+                            <img src="" alt=""><span class="mixNum"></span>                            
+                        </div>
+                        <div class="unlike-num">
+                            <img src="" alt="">
+                        </div>
+                        <div class="comment-num">
+                            <img src="../images/message.png" alt=""><span class="commentNum"></span>                            
+                        </div>
+                      	<div class="last-num">
+                      		<img class="go-header" src="../images/money.png"><span>赞助</span>
+                      	</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reply">
+                <div class="reply-header">
+                    <div class="reply-header-left">
+                        共<span class='replyNum'></span>条评论
+                    </div>
+                </div>
+                <div class="reply-content-wrapper">
+                    <div class="reply-content">
+                        <div class="reply-content"></div>
+                        <script type="text/html" id="reply-other">
+                            <%for(var i = 0;i <Array.length;i++){%>
+                                <div class="other-reply-first" level="<%=Array[i].level%>" likeType="<%=Array[i].myUpDown%>">
+                                    <div class="other-user-info">
+                                        <img class="other-user-img" src="<%=Array[i].img%>"/>
+                                        <span class="other-user-name"><%=Array[i].nickName%></span>
+                                        <span class="send-time"><%=time[i]%></span>
+                                        <span class="icon-more"></span>
+                                    </div>
+                                    <div class="other-reply-content"><%=Array[i].content%></div>
+                                    <div class="icon-wrapper">
+                                        <div id="replayContent">
+                                        <div class="replay-wrapper">
+                                            <span class="icon-rice"><img src="../images/repaly.png">&nbsp;&nbsp;</span>
+                                        </div>
+                                        <div class="like-num-other">
+                                            <img class="icon-like" src="">
+                                            <span class="like-num-other num"><%=Array[i].upNum-Array[i].downNum%></span>
+                                        </div>
+                                        <div class="unlike-wrapper">
+                                            <img class="icon-unlike" src="">                                           
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <%}%>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src='../js/baiduTemplate.js'></script>
+<script type="text/javascript" src="../js/sharePage.js"></script>
+</html>
